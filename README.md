@@ -1,5 +1,5 @@
 # Linear Regression Calculator
-Performs linear regression using data from the inputted file.
+Performs linear regression using data from the inputted file. Test files are provided (data.txt & data.csv).
 
 ### Features
 - Supports different types of files, ranging from .txt to .csv
