@@ -25,11 +25,8 @@ def linreg(x, y):
     size = len(x)
     xavg = mean(x)
     yavg = mean(y)
-    xyavg = 0
-    for i in range(0, size):
-        xyavg += x[i] * y[i]
-    xyavg /= size
-    m = ((xavg * yavg) - xyavg) / ((xavg ** 2) - (mean(list(map(lambda i: i ** 2, x)))))
+    xyavg = mean([x[i] * y[i] for i in range(0, size)])
+    m = ((xavg * yavg) - xyavg) / ((xavg ** 2) - (mean([i ** 2 for i in x])))
     b = yavg - m * xavg
     stderr, meanerr = 0, 0
     for i in range(0, size):
